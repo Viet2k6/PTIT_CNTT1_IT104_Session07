@@ -59,7 +59,7 @@ class User {
         this.followers.forEach(user => {
             user.posts.forEach(post => {
                 if (post.id == postId) {
-                    const commentId = "cmt" + Date.now();
+                    const commentId = "comment" + Date.now();
                     const comment = new UserComment(commentId, this.id, commentContent);
                     post.addComment(comment);
                 }
